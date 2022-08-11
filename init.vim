@@ -1,4 +1,4 @@
-" Pluggins
+"" Pluggins
 call plug#begin()
 Plug 'morhetz/gruvbox'
 Plug 'prettier/vim-prettier', { 'do': 'yarn install --frozen-lockfile --production' }
@@ -18,13 +18,12 @@ Plug 'epilande/vim-es2015-snippets'
 Plug 'epilande/vim-react-snippets'
 Plug 'SirVer/ultisnips'
 Plug 'grvcoelho/vim-javascript-snippets'
-Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'honza/vim-snippets'
 Plug 'tpope/vim-fugitive'
 Plug 'kqito/vim-easy-replace'
 call plug#end()
 
-" Global Sets
+"" Global Sets
 syntax on            " Enable syntax highlight
 set nu               " Enable line numbers
 set relativenumber   " Enable relative numbers
@@ -55,10 +54,7 @@ filetype on          " Detect and set the filetype option and trigger the FileTy
 filetype plugin on   " Load the plugin file for the file type, if any
 filetype indent on   " Load the indent file for the file type, if any
 
-" Remaps
-let mapleader=" "
-
-" Remaps
+"" Maps
 let mapleader=" "
 
 " Enter
@@ -73,9 +69,6 @@ map <leader>z :wq<CR>
 nmap op o<Esc>k
 nmap oi O<Esc>j
 nmap oo A<CR>
-
-" Call command shortcut
-nmap <leader>c :
 
 " Shortcuts for split navigation
 map <leader>h <C-w>h
@@ -121,32 +114,12 @@ nmap tt :q<CR>
 " Call command shortcut
 nmap tc :!
 
-" Coc Snippets 
-" Use <C-l> for trigger snippet expand.
-imap <C-l> <Plug>(coc-snippets-expand)
-
-" Use <C-j> for select text for visual placeholder of snippet.
-vmap <C-j> <Plug>(coc-snippets-select)
-
-" Use <C-j> for jump to next placeholder, it's default of coc.nvim
-let g:coc_snippet_next = '<c-j>'
-
-" Use <C-k> for jump to previous placeholder, it's default of coc.nvim
-let g:coc_snippet_prev = '<c-k>'
-
-" Use <C-j> for both expand and jump (make expand higher priority.)
-imap <C-j> <Plug>(coc-snippets-expand-jump)
-
-" Use <leader>x for convert visual selected code to snippet
-xmap <leader>x  <Plug>(coc-convert-snippet)
-
 ""Themes
 if exists('+termguicolors')
   let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
     let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
       set termguicolors
 endif
-
 let g:airline_theme = 'gruvbox'
 
 " autocmd 
@@ -160,7 +133,6 @@ endfunction
 autocmd! CursorHold,CursorHoldI * call HighlightWordUnderCursor()
 
 let g:python3_host_prog = 'C:\Users\Alan\AppData\Local\Programs\Python\Python310/python'
-let g:coc_global_extensions = [ 'coc-snippets', ]
 
 inoremap <silent><expr> <TAB>
       \ pumvisible() ? coc#_select_confirm() :
@@ -172,7 +144,6 @@ function! s:check_back_space() abort
   let col = col('.') - 1
   return !col || getline('.')[col - 1]  =~# '\s'
 endfunction
-
 let g:coc_snippet_next = '<tab>'
 
 
