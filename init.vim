@@ -1,16 +1,15 @@
 "" Pluggins
 call plug#begin()
+" Theme
 Plug 'morhetz/gruvbox'
+Plug 'vim-airline/vim-airline-themes'
+
 Plug 'prettier/vim-prettier', { 'do': 'yarn install --frozen-lockfile --production' }
 Plug 'tpope/vim-surround'
 Plug 'mxw/vim-jsx'
-Plug 'mattn/emmet-vim'
-Plug 'nvim-lua/plenary.nvim'
-Plug 'nvim-telescope/telescope.nvim'
 Plug 'preservim/nerdtree'
 Plug 'preservim/nerdcommenter'
 Plug 'bling/vim-airline'
-Plug 'vim-airline/vim-airline-themes'
 Plug 'pangloss/vim-javascript'
 Plug 'Yggdroot/indentLine'
 Plug 'jiangmiao/auto-pairs'
