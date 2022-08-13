@@ -140,18 +140,6 @@ autocmd! CursorHold,CursorHoldI * call HighlightWordUnderCursor()
 
 let g:python3_host_prog = 'C:\Users\Alan\AppData\Local\Programs\Python\Python310/python'
 
-inoremap <silent><expr> <TAB>
-      \ pumvisible() ? coc#_select_confirm() :
-      \ coc#expandableOrJumpable() ? "\<C-r>=coc#rpc#request('doKeymap', ['snippets-expand-jump',''])\<CR>" :
-      \ <SID>check_back_space() ? "\<TAB>" :
-      \ coc#refresh()
-
-function! s:check_back_space() abort
-  let col = col('.') - 1
-  return !col || getline('.')[col - 1]  =~# '\s'
-endfunction
-let g:coc_snippet_next = '<tab>'
-
 
 """"""""""""""""""""""""""""""""""""""""""
 " COC
@@ -173,11 +161,19 @@ set signcolumn=yes
 " Use tab for trigger completion with characters ahead and navigate.
 " NOTE: Use command ':verbose imap <tab>' to make sure tab is not mapped by
 " other plugin before putting this into your config.
-inoremap <silent><expr> <TAB>
-      \ coc#pum#visible() ? coc#pum#next(1):
-      \ CheckBackspace() ? "\<Tab>" :
-      \ coc#refresh()
-inoremap <expr><S-TAB> coc#pum#visible() ? coc#pum#prev(1) : "\<C-h>"
+
+ inoremap <silent><expr> <CR> coc#pum#visible() ? coc#pum#confirm() : "\<C-g>u\<CR>\<c-r>=coc#on_enter()\<CR>"
+ inoremap <silent><expr> <C-x><C-z> coc#pum#visible() ? coc#pum#stop() : "\<C-x>\<C-z>"
+ " remap for complete to use tab and <cr>
+ inoremap <silent><expr> <TAB>
+     \ coc#pum#visible() ? coc#pum#next(1):
+     \ <SID>check_back_space() ? "\<Tab>" :
+     \ coc#refresh()
+ inoremap <expr><S-TAB> coc#pum#visible() ? coc#pum#prev(1) : "\<C-h>"
+ inoremap <silent><expr> <c-space> coc#refresh()
+
+ hi CocSearch ctermfg=12 guifg=#18A3FF
+ hi CocMenuSel ctermbg=109 guibg=#13354A
 
 " Make <CR> to accept selected completion item or notify coc.nvim to format
 " <C-g>u breaks current undo, please make your own choice.
@@ -328,20 +324,23 @@ imap <C-j> <Plug>(coc-snippets-expand-jump)
 " Use <leader>x for convert visual selected code to snippet
 xmap <leader>x  <Plug>(coc-convert-snippet)
 
-inoremap <silent><expr> <TAB>
-      \ pumvisible() ? coc#_select_confirm() :
-      \ coc#expandableOrJumpable() ? "\<C-r>=coc#rpc#request('doKeymap', ['snippets-expand-jump',''])\<CR>" :
-      \ <SID>check_back_space() ? "\<TAB>" :
-      \ coc#refresh()
+   inoremap <silent><expr> <CR> coc#pum#visible() ? coc#pum#confirm() : "\<C-g>u\<CR>\<c-r>=coc#on_enter()\<CR>"
+    inoremap <silent><expr> <C-x><C-z> coc#pum#visible() ? coc#pum#stop() : "\<C-x>\<C-z>"
+    " remap for complete to use tab and <cr>
+    inoremap <silent><expr> <TAB>
+        \ coc#pum#visible() ? coc#pum#next(1):
+        \ <SID>check_back_space() ? "\<Tab>" :
+        \ coc#refresh()
+    inoremap <expr><S-TAB> coc#pum#visible() ? coc#pum#prev(1) : "\<C-h>"
+    inoremap <silent><expr> <c-space> coc#refresh()
+
+    hi CocSearch ctermfg=12 guifg=#18A3FF
+    hi CocMenuSel ctermbg=109 guibg=#13354A
 
 function! s:check_back_space() abort
   let col = col('.') - 1
   return !col || getline('.')[col - 1]  =~# '\s'
 endfunction
-
-let g:coc_snippet_next = '<tab>'
-
-
 
 " COC EXPLORER
 :nnoremap <space>e :CocCommand explorer<CR>
