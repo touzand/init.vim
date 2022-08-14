@@ -7,7 +7,6 @@ endif
 let g:airline_theme = 'gruvbox'
 colorscheme gruvbox  " Gruvbox
 
-
 " autocmd 
 function! HighlightWordUnderCursor()
     if getline(".")[col(".")-1] !~# '[[:punct:][:blank:]]'
@@ -20,10 +19,9 @@ autocmd! CursorHold,CursorHoldI * call HighlightWordUnderCursor()
 
 let g:python3_host_prog = 'C:\Users\Alan\AppData\Local\Programs\Python\Python310/python'
 
-""""""""""""""""""""""""""""""""""""""""""
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " COC
 let g:coc_global_extensions = [ 'coc-snippets', 'coc-explorer' ]
-
 
 " Some servers have issues with backup files, see #649.
 set nobackup
@@ -38,9 +36,6 @@ set updatetime=300
 set signcolumn=yes
 
 " Use tab for trigger completion with characters ahead and navigate.
-" NOTE: Use command ':verbose imap <tab>' to make sure tab is not mapped by
-" other plugin before putting this into your config.
-
  inoremap <silent><expr> <CR> coc#pum#visible() ? coc#pum#confirm() : "\<C-g>u\<CR>\<c-r>=coc#on_enter()\<CR>"
  inoremap <silent><expr> <C-x><C-z> coc#pum#visible() ? coc#pum#stop() : "\<C-x>\<C-z>"
  " remap for complete to use tab and <cr>
@@ -149,9 +144,6 @@ command! -nargs=0 OR   :call     CocActionAsync('runCommand', 'editor.action.org
 " NOTE: Please see `:h coc-status` for integrations with external plugins that
 " provide custom statusline: lightline.vim, vim-airline.
 set statusline^=%{coc#status()}%{get(b:,'coc_current_function','')}
-
-
-
 
 function! s:check_back_space() abort
   let col = col('.') - 1

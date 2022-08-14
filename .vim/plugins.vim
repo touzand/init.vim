@@ -1,4 +1,3 @@
-" Pluggins
 call plug#begin()
 " Theme
 Plug 'morhetz/gruvbox'
@@ -26,6 +25,5 @@ Plug 'pangloss/vim-javascript'
 Plug 'tpope/vim-fugitive'
 Plug 'kqito/vim-easy-replace'
 Plug 'neoclide/coc.nvim' , { 'branch' : 'release' }
-"Plug 'SirVer/ultisnips'
 call plug#end()
 

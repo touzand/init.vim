@@ -3,7 +3,7 @@ let mapleader=" "
 " Enter
 nmap <leader><leader> <CR>
 
-"Save
+" Save file
 map <leader>w :w<CR>
 map <leader>q :q<CR>
 map <leader>z :wq<CR>
@@ -19,18 +19,14 @@ map <leader>j <C-w>j
 map <leader>k <C-w>k
 map <leader>l <C-w>l
 
-" Navigate between buffers
-nmap <leader>e :bn<CR>
-nmap <leader>i :bp<CR>
-
 " Prettier
-map <leader>p :Prettier<CR>
+map <leader>P :Prettier<CR>
 
-" Move a lineText
+" Move a line
 map <leader>k ddkP
 map <leader>j ddp
-
-" Run Python Code
+ 
+" Run python Code
 map <leader>pp :!python %<CR>
 
 " Fast scroll
@@ -50,9 +46,6 @@ nmap tv :vsplit<CR>
 
 " Close splits and others
 nmap tt :q<CR>
-
-" Call command shortcut
-nmap tc :!
 
 " Use preset argument to open it
 nnoremap <space>ed :CocCommand explorer --preset .vim<CR>
