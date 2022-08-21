@@ -1,5 +1,12 @@
 let mapleader=" "
 
+" Increment/Decrement
+map <C-u> <C-a>
+map <C-n> <C-x>
+
+" Select workd under cursor
+map <leader>kl bve
+
 " Enter
 nmap <leader><leader> <CR>
 
