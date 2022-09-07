@@ -1,5 +1,17 @@
 let mapleader=" "
+nnoremap <Leader>if <Plug>(JsFileImport)
 
+nnoremap <Leader>iF <Plug>(JsFileImportList)
+
+nnoremap <Leader>ig <Plug>(JsGotoDefinition)
+
+nnoremap <Leader>iG <Plug>(JsGotoDefinition)
+
+nnoremap <Leader>ip <Plug>(PromptJsFileImport)
+
+nnoremap <Leader>is <Plug>(SortJsFileImport)
+
+nnoremap <Leader>ic <Plug>(JsFixImport)
 " Increment/Decrement
 map <C-u> <C-a>
 map <C-n> <C-x>
@@ -8,17 +20,30 @@ map <C-n> <C-x>
 map <leader>kl bve
 
 " Enter
-nmap <leader><leader> <CR>
+map <leader><leader> <CR>
+
+map <leader>ee :NERDTreeToggle<CR>
 
 " Save file
 map <leader>w :w<CR>
 map <leader>q :q<CR>
-map <leader>z :wq<CR>
+map <leader>z :wqall<CR>
 
 " Adding an empty line below, above and below with insert
 nmap op o<Esc>k
 nmap oi O<Esc>j
 nmap oo A<CR>
+
+" Buffer navigation
+map <leader>1 :b 1<CR>
+map <leader>2 :b 2<CR>
+map <leader>3 :b 3<CR>
+map <leader>4 :b 4<CR>
+map <leader>5 :b 5<CR>
+map <leader>6 :b 6<CR>
+map <leader>7 :b h<CR>
+map <leader>8 :b 8<CR>
+map <leader>9 :b 9<CR>
 
 " Shortcuts for split navigation
 map <leader>h <C-w>h
@@ -55,16 +80,16 @@ nmap tv :vsplit<CR>
 nmap tt :q<CR>
 
 " Use preset argument to open it
-nnoremap <space>ed :CocCommand explorer --preset .vim<CR>
-nnoremap <space>ef :CocCommand explorer --preset floating<CR>
-nnoremap <space>ec :CocCommand explorer --preset cocConfig<CR>
-nnoremap <space>eb :CocCommand explorer --preset buffer<CR>
+"nnoremap <space>ed :CocCommand explorer --preset .vim<CR>
+"nnoremap <space>ef :CocCommand explorer --preset floating<CR>
+"nnoremap <space>ec :CocCommand explorer --preset cocConfig<CR>
+"nnoremap <space>eb :CocCommand explorer --preset buffer<CR>
 
 " List all presets
 nnoremap <space>el :CocList explPresets
 
 " COC EXPLORER
-:nnoremap <space>e :CocCommand explorer<CR>
+":nnoremap <space>e :CocCommand explorer<CR>
 
 let g:coc_explorer_global_presets = {
 \   '.vim': {
@@ -174,4 +199,3 @@ if has('nvim-0.4.0') || has('patch-8.2.0750')
   vnoremap <silent><nowait><expr> <C-f> coc#float#has_scroll() ? coc#float#scroll(1) : "\<C-f>"
   vnoremap <silent><nowait><expr> <C-b> coc#float#has_scroll() ? coc#float#scroll(0) : "\<C-b>"
 endif
-

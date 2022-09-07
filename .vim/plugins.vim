@@ -16,7 +16,7 @@ Plug 'jiangmiao/auto-pairs'
 Plug 'tpope/vim-surround'
 Plug 'preservim/nerdtree'
 Plug 'preservim/nerdcommenter'
-
+Plug 'ap/vim-buftabline'
 
 " Others
 Plug 'prettier/vim-prettier', { 'do': 'yarn install --frozen-lockfile --production' }
@@ -26,5 +26,3 @@ Plug 'tpope/vim-fugitive'
 Plug 'kqito/vim-easy-replace'
 Plug 'neoclide/coc.nvim' , { 'branch' : 'release' }
 call plug#end()
-
-

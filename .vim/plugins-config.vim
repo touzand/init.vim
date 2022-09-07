@@ -20,8 +20,8 @@ autocmd! CursorHold,CursorHoldI * call HighlightWordUnderCursor()
 let g:python3_host_prog = 'C:\Users\Alan\AppData\Local\Programs\Python\Python310/python'
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" COC
-let g:coc_global_extensions = [ 'coc-snippets', 'coc-explorer' ]
+" COC "'coc-explorer'
+let g:coc_global_extensions = [ 'coc-snippets' ]
 
 " Some servers have issues with backup files, see #649.
 set nobackup
@@ -149,4 +149,3 @@ function! s:check_back_space() abort
   let col = col('.') - 1
   return !col || getline('.')[col - 1]  =~# '\s'
 endfunction
-

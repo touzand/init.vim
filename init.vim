@@ -12,17 +12,21 @@ set incsearch
 set ignorecase       
 set smartcase        
 set scrolloff=8      
-set colorcolumn=100  
 set signcolumn=yes   
 set cmdheight=2      
 set updatetime=100   
-set encoding=utf-8  
+set encoding=utf-8
 set nobackup        
 set nowritebackup  
 set splitright       
 set splitbelow      
 set autoread       
 set mouse=a       
+set background=dark
+set path+=**
+set cursorline
+"set cursorcolumn
+
 filetype on          
 filetype plugin on  
 filetype indent on 
@@ -30,5 +34,4 @@ filetype indent on
 so ~\vim\.vim\maps.vim
 so ~\vim\.vim\plugins.vim
 so ~\vim\.vim\plugins-config.vim
-
 
