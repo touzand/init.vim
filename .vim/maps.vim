@@ -61,6 +61,9 @@ map <leader>j ddp
 " Run python Code
 map <leader>pp :!python %<CR>
 
+" Run Node Code
+map <leader>nn :!node %<CR>
+
 " Fast scroll
 map <C-j> 10<C-e>
 map <C-k> 10<C-y>
@@ -199,3 +202,4 @@ if has('nvim-0.4.0') || has('patch-8.2.0750')
   vnoremap <silent><nowait><expr> <C-f> coc#float#has_scroll() ? coc#float#scroll(1) : "\<C-f>"
   vnoremap <silent><nowait><expr> <C-b> coc#float#has_scroll() ? coc#float#scroll(0) : "\<C-b>"
 endif
+

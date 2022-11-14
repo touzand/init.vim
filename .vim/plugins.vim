@@ -1,4 +1,4 @@
-call plug#begin()
+  call plug#begin()
 " Theme
 Plug 'morhetz/gruvbox'
 Plug 'vim-airline/vim-airline-themes'
@@ -6,9 +6,11 @@ Plug 'bling/vim-airline'
 
 " Snippets
 Plug 'epilande/vim-es2015-snippets'
-Plug 'epilande/vim-react-snippets'
 Plug 'grvcoelho/vim-javascript-snippets'
 Plug 'honza/vim-snippets'
+Plug 'SirVer/ultisnips'
+Plug 'mlaursen/vim-react-snippets'
+
 
 " IDE
 Plug 'Yggdroot/indentLine'
@@ -17,6 +19,8 @@ Plug 'tpope/vim-surround'
 Plug 'preservim/nerdtree'
 Plug 'preservim/nerdcommenter'
 Plug 'ap/vim-buftabline'
+Plug 'junegunn/goyo.vim'
+Plug 'tpope/vim-repeat'
 
 " Others
 Plug 'prettier/vim-prettier', { 'do': 'yarn install --frozen-lockfile --production' }

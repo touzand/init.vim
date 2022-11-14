@@ -7,17 +7,28 @@ endif
 let g:airline_theme = 'gruvbox'
 colorscheme gruvbox  " Gruvbox
 
-" autocmd 
-function! HighlightWordUnderCursor()
-    if getline(".")[col(".")-1] !~# '[[:punct:][:blank:]]'
-        exec 'match' 'Search' '/\V\<'.expand('<cword>').'\>/'
-    else
-        match none
-    endif
-endfunction
-autocmd! CursorHold,CursorHoldI * call HighlightWordUnderCursor()
+    " autocmd 
+    function! HighlightWordUnderCursor()
+        if getline(".")[col(".")-1] !~# '[[:punct:][:blank:]]'
+            exec 'match' 'Search' '/\V\<'.expand('<cword>').'\>/'          
+        else
+            match none
+        endif
+    endfunction
+    autocmd! CursorHold,CursorHoldI * call HighlightWordUnderCursor()          
 
 let g:python3_host_prog = 'C:\Users\Alan\AppData\Local\Programs\Python\Python310/python'
+
+"-Startify
+let g:startify_custom_header = [
+\ ]
+
+let g:shoot_save_path = 'C:\Users\Alan\Pictures'
+let g:shoot_zoom_factor = 3
+
+
+    " Le quiero lamer el culo a Fernanda        
+
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " COC "'coc-explorer'

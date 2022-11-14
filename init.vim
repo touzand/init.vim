@@ -1,4 +1,5 @@
-syntax on            
+"- Global set 
+syntax on 
 set nu               
 set relativenumber          
 set tabstop=2        
@@ -7,6 +8,7 @@ set shiftwidth=2
 set expandtab        
 set smarttab        
 set smartindent      
+set backspace=indent,eol,start
 set hidden           
 set incsearch        
 set ignorecase       
@@ -21,11 +23,12 @@ set nowritebackup
 set splitright       
 set splitbelow      
 set autoread       
-set mouse=a       
-set background=dark
-set path+=**
+set autoindent
 set cursorline
-"set cursorcolumn
+set mouse=a       
+set path+=**
+set langmenu=en_US.UTF-8
+language en  
 
 filetype on          
 filetype plugin on  
