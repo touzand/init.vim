@@ -1,4 +1,4 @@
-"- Global set 
+" Global set 
 syntax on 
 set nu               
 set relativenumber          
@@ -8,6 +8,7 @@ set shiftwidth=2
 set expandtab        
 set smarttab        
 set smartindent      
+set autoindent
 set backspace=indent,eol,start
 set hidden           
 set incsearch        
@@ -23,12 +24,13 @@ set nowritebackup
 set splitright       
 set splitbelow      
 set autoread       
-set autoindent
 set cursorline
 set mouse=a       
 set path+=**
 set langmenu=en_US.UTF-8
+set nocompatible
 language en  
+
 
 filetype on          
 filetype plugin on  

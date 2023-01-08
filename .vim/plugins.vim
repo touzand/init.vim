@@ -10,6 +10,7 @@ Plug 'grvcoelho/vim-javascript-snippets'
 Plug 'honza/vim-snippets'
 Plug 'SirVer/ultisnips'
 Plug 'mlaursen/vim-react-snippets'
+Plug 'styled-components/vim-styled-components', { 'branch': 'main' }
 
 
 " IDE
@@ -19,7 +20,6 @@ Plug 'tpope/vim-surround'
 Plug 'preservim/nerdtree'
 Plug 'preservim/nerdcommenter'
 Plug 'ap/vim-buftabline'
-Plug 'junegunn/goyo.vim'
 Plug 'tpope/vim-repeat'
 
 " Others
