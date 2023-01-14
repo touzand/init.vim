@@ -1,17 +1,5 @@
 let mapleader=" "
-nnoremap <Leader>if <Plug>(JsFileImport)
 
-nnoremap <Leader>iF <Plug>(JsFileImportList)
-
-nnoremap <Leader>ig <Plug>(JsGotoDefinition)
-
-nnoremap <Leader>iG <Plug>(JsGotoDefinition)
-
-nnoremap <Leader>ip <Plug>(PromptJsFileImport)
-
-nnoremap <Leader>is <Plug>(SortJsFileImport)
-
-nnoremap <Leader>ic <Plug>(JsFixImport)
 " Increment/Decrement
 map <C-u> <C-a>
 map <C-n> <C-x>
@@ -19,9 +7,7 @@ map <C-n> <C-x>
 " Select workd under cursor
 map <leader>kl bve
 
-" Enter
-map <leader><leader> <CR>
-
+" Open NERDTreeToggle
 map <leader>ee :NERDTreeToggle<CR>
 
 " Save file
@@ -34,21 +20,8 @@ nmap op o<Esc>k
 nmap oi O<Esc>j
 nmap oo A<CR>
 
-" Buffer navigation
-map <leader>1 :b 1<CR>
-map <leader>2 :b 2<CR>
-map <leader>3 :b 3<CR>
-map <leader>4 :b 4<CR>
-map <leader>5 :b 5<CR>
-map <leader>6 :b 6<CR>
-map <leader>7 :b h<CR>
-map <leader>8 :b 8<CR>
-map <leader>9 :b 9<CR>
-
 " Shortcuts for split navigation
 map <leader>h <C-w>h
-map <leader>j <C-w>j
-map <leader>k <C-w>k
 map <leader>l <C-w>l
 
 " Prettier
@@ -81,18 +54,6 @@ nmap tv :vsplit<CR>
 
 " Close splits and others
 nmap tt :q<CR>
-
-" Use preset argument to open it
-"nnoremap <space>ed :CocCommand explorer --preset .vim<CR>
-"nnoremap <space>ef :CocCommand explorer --preset floating<CR>
-"nnoremap <space>ec :CocCommand explorer --preset cocConfig<CR>
-"nnoremap <space>eb :CocCommand explorer --preset buffer<CR>
-
-" List all presets
-nnoremap <space>el :CocList explPresets
-
-" COC EXPLORER
-":nnoremap <space>e :CocCommand explorer<CR>
 
 let g:coc_explorer_global_presets = {
 \   '.vim': {

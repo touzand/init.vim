@@ -19,17 +19,6 @@ colorscheme gruvbox  " Gruvbox
 
 let g:python3_host_prog = 'C:\Users\Alan\AppData\Local\Programs\Python\Python310/python'
 
-"-Startify
-let g:startify_custom_header = [
-\ ]
-
-let g:shoot_save_path = 'C:\Users\Alan\Pictures'
-let g:shoot_zoom_factor = 3
-
-
-    " Le quiero lamer el culo a Fernanda        
-
-
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " COC "'coc-explorer'
 let g:coc_global_extensions = [ 'coc-snippets' ]
