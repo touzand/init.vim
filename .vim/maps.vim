@@ -32,7 +32,7 @@ map <leader>k ddkP
 map <leader>j ddp
  
 " Run python Code
-map <leader>pp :!python %<CR>
+map <leader>O :!python %<CR>
 
 " Run Node Code
 map <leader>nn :!node %<CR>
