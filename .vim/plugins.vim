@@ -5,6 +5,7 @@ Plug 'vim-airline/vim-airline-themes'
 Plug 'bling/vim-airline'
 
 
+Plug 'davidhalter/jedi-vim'
 Plug 'sheerun/vim-polyglot'
 
 
