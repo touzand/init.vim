@@ -4,6 +4,10 @@ Plug 'morhetz/gruvbox'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'bling/vim-airline'
 
+
+Plug 'sheerun/vim-polyglot'
+
+
 " Snippets
 Plug 'epilande/vim-es2015-snippets'
 Plug 'grvcoelho/vim-javascript-snippets'
@@ -33,5 +37,8 @@ Plug 'neoclide/coc.nvim' , { 'branch' : 'release' }
 
 " If you have nodejs and yarn
 Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app && yarn install' }
+
+
+"Plug 'Valloric/YouCompleteMe', { 'do': './install.py' }
 
 call plug#end()
