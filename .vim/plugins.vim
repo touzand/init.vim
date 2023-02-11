@@ -1,4 +1,5 @@
-  call plug#begin()
+ call plug#begin()
+
 " Theme
 Plug 'morhetz/gruvbox'
 Plug 'vim-airline/vim-airline-themes'
@@ -14,11 +15,6 @@ Plug 'honza/vim-snippets'
 Plug 'SirVer/ultisnips'
 Plug 'mlaursen/vim-react-snippets'
 Plug 'styled-components/vim-styled-components', { 'branch': 'main' }
-
-'aksjdlakjds'
-
-aklsdjklajsd
-
 
 " IDE
 Plug 'Yggdroot/indentLine'
