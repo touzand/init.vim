@@ -1,7 +1,12 @@
 " NerdTree Right side
  "let g:NERDTreeWinPos = "right"
+ "
+ " Jedi-vim
+ let g:jedi#popup_on_dot = 1
+ let g:jedi#use_splits_not_buffers = "right"
+ let g:jedi#show_call_signatures = 0
 
-""Themes
+ "Themes
 if exists('+termguicolors')
   let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
     let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
