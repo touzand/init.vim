@@ -1,10 +1,5 @@
 let mapleader=" "
  
-"set hidden
-"nnoremap <leader>H :bnext<CR>
-"nnoremap <leader>L :bprev<CR>
-
-
 " Increment/Decrement
 map <C-u> <C-a>
 map <C-n> <C-x>
