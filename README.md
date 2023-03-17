@@ -8,5 +8,12 @@ My personal Vim configuration includes:
 
 * My customized `init.vim` file with the configuration options I've chosen for Nvim.
 * A plugin folder with the plugins I use to extend Vim's functionality.
-* A README.md file that explains how to install and use my personal Vim configuration.
+<!--* A README.md file that explains how to install and use my personal Vim configuration.-->
 
+## Contributions
+
+If you have any suggestions or improvements for my personal Vim configuration, please let me know! I'd love to see how other people have tailored their text editors.
+
+## License
+
+This repository is licensed under the MIT License. You can use it for your own personal use or modify it to fit your needs.
