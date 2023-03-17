@@ -21,6 +21,8 @@ Plug 'tpope/vim-surround'
 Plug 'preservim/nerdtree'
 Plug 'preservim/nerdcommenter'
 Plug 'sheerun/vim-polyglot'
+Plug 'alvan/vim-closetag'
+
 
 " Others
 Plug 'prettier/vim-prettier', { 'do': 'yarn install --frozen-lockfile --production' }
@@ -31,5 +33,8 @@ Plug 'neoclide/coc.nvim' , { 'branch' : 'release' }
 
 " If you have nodejs and yarn
 Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app && yarn install' }
+
+
+Plug 'junegunn/goyo.vim'
 
 call plug#end()
