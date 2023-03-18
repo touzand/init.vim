@@ -8,6 +8,7 @@ My personal Vim configuration includes:
 
 * My customized `init.vim` file with the configuration options I've chosen for Nvim.
 * A plugin folder with the plugins I use to extend Vim's functionality.
+* A map folder with all the keys mapped and custom shortcuts
 <!--* A README.md file that explains how to install and use my personal Vim configuration.-->
 
 ## Contributions
