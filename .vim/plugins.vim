@@ -17,6 +17,12 @@ Plug 'styled-components/vim-styled-components', { 'branch': 'main' }
 "Plug 'sheerun/vim-polyglot'
 Plug 'alvan/vim-closetag'
 
+Plug 'prabirshrestha/vim-lsp'
+Plug 'mattn/vim-lsp-settings'
+Plug 'prabirshrestha/asyncomplete.vim'
+Plug 'prabirshrestha/asyncomplete-lsp.vim'
+
+
 " Others
 Plug 'prettier/vim-prettier', {
   \ 'do': 'yarn install --frozen-lockfile --production',
