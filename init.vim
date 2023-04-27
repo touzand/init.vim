@@ -1,6 +1,6 @@
-" Global set 
-syntax on 
-set nu               
+syntax on
+set nu
+set relativenumber
 set relativenumber          
 set tabstop=2        
 set softtabstop=2    
@@ -17,7 +17,7 @@ set smartcase
 set scrolloff=8      
 set signcolumn=yes   
 set cmdheight=2      
-set updatetime=100   
+set updatetime=100
 set encoding=utf-8
 set nobackup        
 set nowritebackup  
@@ -31,12 +31,10 @@ set langmenu=en_US.UTF-8
 set nocompatible
 language en  
 
-
 filetype on          
 filetype plugin on  
-filetype indent on 
+filetype indent on
 
 so ~\vim\.vim\maps.vim
 so ~\vim\.vim\plugins.vim
-so ~\vim\.vim\plugins-config.vim
-
+so ~\vim\.vim\config.vim
