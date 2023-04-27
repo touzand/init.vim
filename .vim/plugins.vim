@@ -17,6 +17,7 @@ Plug 'styled-components/vim-styled-components', { 'branch': 'main' }
 "Plug 'sheerun/vim-polyglot'
 Plug 'alvan/vim-closetag'
 
+" Autocompletion vim-lsp
 Plug 'prabirshrestha/vim-lsp'
 Plug 'mattn/vim-lsp-settings'
 Plug 'prabirshrestha/asyncomplete.vim'
