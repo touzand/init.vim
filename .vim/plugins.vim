@@ -18,8 +18,6 @@ Plug 'styled-components/vim-styled-components', { 'branch': 'main' }
 Plug 'alvan/vim-closetag'
 
 " Others
-"Plug 'prettier/vim-prettier', { 'do': 'yarn install --frozen-lockfile --production' }
-
 Plug 'prettier/vim-prettier', {
   \ 'do': 'yarn install --frozen-lockfile --production',
   \ 'branch': 'release/0.x'
