@@ -19,7 +19,6 @@ Plug 'mattn/vim-lsp-settings'
 Plug 'prabirshrestha/asyncomplete.vim'
 Plug 'prabirshrestha/asyncomplete-lsp.vim'
 
-
 " Others
 Plug 'prettier/vim-prettier', {
   \ 'do': 'yarn install --frozen-lockfile --production',
@@ -31,6 +30,5 @@ Plug 'maxmellon/vim-jsx-pretty'
 " Really necessary ?
 Plug 'vim-airline/vim-airline-themes'
 Plug 'bling/vim-airline'
-
 
 call plug#end()
