@@ -3,10 +3,6 @@ call plug#begin()
 " Theme color
 Plug 'morhetz/gruvbox'
 
-" Really necessary ?
-Plug 'vim-airline/vim-airline-themes'
-Plug 'bling/vim-airline'
-
 " IDE 
 Plug 'Yggdroot/indentLine'
 Plug 'jiangmiao/auto-pairs'
@@ -31,5 +27,10 @@ Plug 'prettier/vim-prettier', {
   \ }
 Plug 'pangloss/vim-javascript'
 Plug 'maxmellon/vim-jsx-pretty'
+
+" Really necessary ?
+Plug 'vim-airline/vim-airline-themes'
+Plug 'bling/vim-airline'
+
 
 call plug#end()
