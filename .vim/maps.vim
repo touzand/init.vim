@@ -1,5 +1,7 @@
 let mapleader=" "
 
+:inoremap <expr> <cr> pumvisible() ? '<c-y>' : '<cr>'
+
 " File
 map <leader>w :w<CR>
 map <leader>q :q<CR>

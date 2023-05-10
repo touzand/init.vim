@@ -12,6 +12,7 @@ Plug 'preservim/nerdcommenter'
 Plug 'styled-components/vim-styled-components', { 'branch': 'main' }
 "Plug 'sheerun/vim-polyglot'
 Plug 'alvan/vim-closetag'
+Plug 'kqito/vim-easy-replace'
 
 " Autocompletion vim-lsp
 Plug 'prabirshrestha/vim-lsp'
