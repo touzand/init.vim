@@ -30,3 +30,6 @@ nnoremap <leader>e :NERDTreeToggle<CR>
 " Shortcuts for split navigation
 map <leader>h <C-w>h
 map <leader>l <C-w>l
+
+" list buffers and jump to a chosen one
+nnoremap <Leader>b :ls<CR>:b<Space>
