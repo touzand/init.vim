@@ -31,5 +31,6 @@ Plug 'maxmellon/vim-jsx-pretty'
 " Really necessary ?
 Plug 'vim-airline/vim-airline-themes'
 Plug 'bling/vim-airline'
+Plug 'bling/vim-bufferline'
 
 call plug#end()

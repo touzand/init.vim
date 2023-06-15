@@ -8,15 +8,11 @@ set shiftwidth=2
 set expandtab        
 set smarttab        
 set smartindent      
-
 "set smartindent      
 set nosmartindent      
-
 "set autoindent
 set noautoindent
-
 set formatoptions-=t
-
 set backspace=indent,eol,start
 set hidden           
 set incsearch        
