@@ -37,6 +37,4 @@ Plug 'bling/vim-bufferline'
 
 Plug 'ap/vim-css-color'
 
-Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
-
 call plug#end()
