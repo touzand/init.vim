@@ -33,8 +33,6 @@ Plug 'vim-airline/vim-airline-themes'
 Plug 'bling/vim-airline'
 
 """"""""""""""""""""""""""""
-Plug 'bling/vim-bufferline'
-
 Plug 'ap/vim-css-color'
 
 call plug#end()
