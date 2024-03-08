@@ -13,23 +13,18 @@ Plug 'styled-components/vim-styled-components', { 'branch': 'main' }
 Plug 'alvan/vim-closetag'
 Plug 'kqito/vim-easy-replace'
 
-" Autocompletion vim-lsp
-Plug 'prabirshrestha/vim-lsp'
-Plug 'mattn/vim-lsp-settings'
-Plug 'prabirshrestha/asyncomplete.vim'
-Plug 'prabirshrestha/asyncomplete-lsp.vim'
-
-" Others
-Plug 'prettier/vim-prettier', {
-  \ 'do': 'yarn install --frozen-lockfile --production',
-  \ 'branch': 'release/0.x'
-  \ }
-Plug 'pangloss/vim-javascript'
-Plug 'maxmellon/vim-jsx-pretty'
+" Prettier
+Plug 'prettier/vim-prettier', { 'do': 'yarn install --frozen-lockfile --production' }
 
 " Really necessary ?
 Plug 'vim-airline/vim-airline-themes'
 Plug 'bling/vim-airline'
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
+Plug 'junegunn/goyo.vim'
+
+Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app && npx --yes yarn install' }
+
+
 
 """"""""""""""""""""""""""""
 Plug 'ap/vim-css-color'

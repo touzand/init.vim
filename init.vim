@@ -31,12 +31,13 @@ set mouse=a
 set path+=**
 set langmenu=en_US.UTF-8
 set nocompatible
-language en  
+"language en  
 
 filetype on          
 filetype plugin on  
 filetype indent on
 
-so ~\vim\.vim\maps.vim
-so ~\vim\.vim\plugins.vim
-so ~\vim\.vim\config.vim
+so ~/.config/nvim/.vim/maps.vim
+so ~/.config/nvim/.vim/plugins.vim
+so ~/.config/nvim/.vim/config.vim
+      

@@ -1,3 +1,25 @@
+
+" CoC extensions
+let g:coc_global_extensions = ['coc-tsserver']
+
+" use <tab> to trigger completion and navigate to the next complete item
+function! CheckBackspace() abort
+  let col = col('.') - 1
+  return !col || getline('.')[col - 1]  =~# '\s'
+endfunction
+
+inoremap <silent><expr> <Tab>
+      \ coc#pum#visible() ? coc#pum#next(1) :
+      \ CheckBackspace() ? "\<Tab>" :
+      \ coc#refresh()
+
+inoremap <expr> <cr> coc#pum#visible() ? coc#pum#confirm() : "\<CR>"
+
+inoremap <silent><expr> <cr> coc#pum#visible() ? coc#_select_confirm() : "\<C-g>u\<CR>"
+
+
+
+
 autocmd StdinReadPre * let s:std_in=1
 autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTreeToggle | endif
 
@@ -46,12 +68,12 @@ autocmd BufLeave *.{js,jsx,ts,tsx} :syntax sync clear
 " filenames like *.xml, *.html, *.xhtml, ...
 " These are the file extensions where this plugin is enabled.
 "
-let g:closetag_filenames = '*.html,*.xhtml,*.phtml,*.jsx'
+let g:closetag_filenames = '*.html,*.xhtml,*.phtml,*.jsx,*.tsx'
 
 " filenames like *.xml, *.xhtml, ...
 " This will make the list of non-closing tags self-closing in the specified files.
 "
-let g:closetag_xhtml_filenames = '*.xhtml,*.jsx'
+let g:closetag_xhtml_filenames = '*.xhtml,*.jsx,*.tsx'
 
 " filetypes like xml, html, xhtml, ...
 " These are the file types where this plugin is enabled.
@@ -61,7 +83,7 @@ let g:closetag_filetypes = 'html,xhtml,phtml'
 " filetypes like xml, xhtml, ...
 " This will make the list of non-closing tags self-closing in the specified files.
 "
-let g:closetag_xhtml_filetypes = 'xhtml,jsx'
+let g:closetag_xhtml_filetypes = 'xhtml,jsx,tsx'
 
 " integer value [0|1]
 " This will make the list of non-closing tags case-sensitive (e.g. `<Link>` will be closed while `<link>` won't.)
@@ -84,11 +106,10 @@ let g:closetag_regions = {
 let g:closetag_shortcut = '>'
 
 " Add > at current position without closing the current tag, default is ''
-"
+
 let g:closetag_close_shortcut = '<leader>>'
 
 " integer value [0|1]
 " Enables closing tags for React fragments -> <></> for all supported file types
 "
 let g:closetag_enable_react_fragment = 1
-
