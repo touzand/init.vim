@@ -1,5 +1,12 @@
+autocmd BufWritePre *.ts,*.tsx CocCommand tsserver.executeFormat
 
-" CoC extensions
+
+
+let g:mergetool_layout = 'mr'
+let g:mergetool_prefer_revision = 'local'
+
+
+ "CoC extensions
 let g:coc_global_extensions = ['coc-tsserver']
 
 " use <tab> to trigger completion and navigate to the next complete item
@@ -17,15 +24,19 @@ inoremap <expr> <cr> coc#pum#visible() ? coc#pum#confirm() : "\<CR>"
 
 inoremap <silent><expr> <cr> coc#pum#visible() ? coc#_select_confirm() : "\<C-g>u\<CR>"
 
+" This makes the time before it updates your hover faster, other
+set updatetime=300
 
-
+" This makes it so that you can click a variable and a float window pops up
+autocmd CursorHold * silent call CocActionAsync('doHover')
 
 autocmd StdinReadPre * let s:std_in=1
 autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTreeToggle | endif
 
-"
+
 " Auto popup complete disabled
-let g:asyncomplete_auto_popup = 0
+let g:asyncomplete_auto_popup = 1
+autocmd! CompleteDone * if pumvisible() == 0 | pclose | endif
 
 function! s:check_back_space() abort
     let col = col('.') - 1
@@ -57,6 +68,7 @@ let g:lsp_diagnostics_enabled = 0
     let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
       set termguicolors
 endif
+
 let g:airline_theme = 'gruvbox'
 colorscheme gruvbox  " Gruvbox
 
@@ -113,3 +125,10 @@ let g:closetag_close_shortcut = '<leader>>'
 " Enables closing tags for React fragments -> <></> for all supported file types
 "
 let g:closetag_enable_react_fragment = 1
+
+let $FZF_DEFAULT_OPTS="--preview-window 'right:57%' --preview 'bat --style=numbers --line-range :300 {}'
+\ --bind ctrl-y:preview-up,ctrl-e:preview-down,
+\ctrl-b:preview-page-up,ctrl-f:preview-page-down,
+\ctrl-u:preview-half-page-up,ctrl-d:preview-half-page-down,
+\shift-up:preview-top,shift-down:preview-bottom,
+\alt-up:half-page-up,alt-down:half-page-down"
