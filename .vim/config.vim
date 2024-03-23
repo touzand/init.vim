@@ -1,9 +1,13 @@
 autocmd BufWritePre *.ts,*.tsx CocCommand tsserver.executeFormat
 
 
+" Possible values :'local' ( default ), 'remote' , 'base'
+"let g:mergetool_prefer_revision = 'local'
 
-let g:mergetool_layout = 'mr'
-let g:mergetool_prefer_revision = 'local'
+" ( m ) : for working of tree version merged file
+" ( r ) : for 'remote' revision
+" ( l ) : for 'local' revision
+"let g:mergetool_layout = 'mr'
 
 
  "CoC extensions
@@ -112,18 +116,14 @@ let g:closetag_regions = {
     \ 'javascriptreact': 'jsxRegion',
     \ }
 
+" Add > at current position without closing the current tag, default is ''
+let g:closetag_close_shortcut = '<leader>>'
 
 " Shortcut for closing tags, default is '>'
-"
 let g:closetag_shortcut = '>'
-
-" Add > at current position without closing the current tag, default is ''
-
-let g:closetag_close_shortcut = '<leader>>'
 
 " integer value [0|1]
 " Enables closing tags for React fragments -> <></> for all supported file types
-"
 let g:closetag_enable_react_fragment = 1
 
 let $FZF_DEFAULT_OPTS="--preview-window 'right:57%' --preview 'bat --style=numbers --line-range :300 {}'
