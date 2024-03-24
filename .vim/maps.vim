@@ -4,9 +4,7 @@ let mapleader=" "
 map <leader>bf :Buffers<CR>
 
 " Git flow config
-map <leader>G :Git<CR>
-
-
+map <leader>G :vertical topleft G<CR>
 
 nnoremap <silent> K :call <SID>show_documentation()<CR>
 
