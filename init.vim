@@ -34,6 +34,9 @@ set path+=**
 set langmenu=en_US.UTF-8
 set nocompatible
 
+" Esta seria otra actualizacion. para resolver en el merge
+" Agregaremos otras linea para aprender a manipular errores
+
 filetype on          
 filetype plugin on  
 filetype indent on
