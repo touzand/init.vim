@@ -34,7 +34,8 @@ set path+=**
 set langmenu=en_US.UTF-8
 set nocompatible
 
-" Esta seria una actualizcion que dara problema en el merge
+" Esta seria otra actualizacion. para resolver en el merge
+" Agregaremos otras linea para aprender a manipular errores
 
 filetype on          
 filetype plugin on  

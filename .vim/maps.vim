@@ -7,6 +7,7 @@ map <leader>bf :Buffers<CR>
 map <leader>G :vertical topleft G<CR>
 map <leader>dg :diffget<CR>
 map <leader>dp :diffput<CR>
+map <leader>ll :vertical topleft G log<CR>
 
 " Gvdiffsplit config
 map <leader>mr :Gvdiffsplit<CR>
