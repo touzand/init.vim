@@ -5,6 +5,11 @@ map <leader>bf :Buffers<CR>
 
 " Git flow config
 map <leader>G :vertical topleft G<CR>
+map <leader>dg :diffget<CR>
+map <leader>dp :diffput<CR>
+
+" Gvdiffsplit config
+map <leader>mr :Gvdiffsplit<CR>
 
 nnoremap <silent> K :call <SID>show_documentation()<CR>
 
