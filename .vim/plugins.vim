@@ -20,12 +20,9 @@ Plug 'tpope/vim-fugitive'
 Plug 'lewis6991/gitsigns.nvim'
 Plug 'samoshkin/vim-mergetool'
 
-
-
-
+" Fzf
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
-
 
 " Prettier
 Plug 'prabirshrestha/vim-lsp'
@@ -39,17 +36,16 @@ Plug 'vim-airline/vim-airline-themes'
 Plug 'bling/vim-airline'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'junegunn/goyo.vim'
-
 Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app && npx --yes yarn install' }
-
-""""""""""""""""""""""""""""
-
-Plug 'ap/vim-css-color'
-"Plug 'davidhalter/jedi-vim'
 
 " Nvim for python development
 Plug 'Vimjas/vim-python-pep8-indent'
 Plug 'ncm2/ncm2'
 Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+
+""""""""""""""""""""""""""""
+
+Plug 'ap/vim-css-color'
+"Plug 'davidhalter/jedi-vim'
 
 call plug#end()
