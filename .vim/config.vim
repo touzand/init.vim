@@ -1,14 +1,16 @@
 autocmd BufWritePre *.ts,*.tsx CocCommand tsserver.executeFormat
 
+" Init config for (FZF)
+let g:fzf_vim = {}
+let g:fzf_layout = { 'window': { 'options':'--reverse','width': 0.7, 'height': 0.7, 'relative':v:false} }
 
-" Possible values :'local' ( default ), 'remote' , 'base'
-"let g:mergetool_prefer_revision = 'local'
+" Possible values :'local' ( default ), 'remote' , 'base' (MergeTool)
+let g:mergetool_prefer_revision = 'local'
 
-" ( m ) : for working of tree version merged file
-" ( r ) : for 'remote' revision
-" ( l ) : for 'local' revision
-"let g:mergetool_layout = 'mr'
-
+" ( m ) : for working of tree version merged file (MergeTool)
+" ( r ) : for 'remote' revision (MergeTool)
+" ( l ) : for 'local' revision (MergeTool)
+let g:mergetool_layout = 'mr'
 
  "CoC extensions
 let g:coc_global_extensions = ['coc-tsserver']
@@ -29,7 +31,7 @@ inoremap <expr> <cr> coc#pum#visible() ? coc#pum#confirm() : "\<CR>"
 inoremap <silent><expr> <cr> coc#pum#visible() ? coc#_select_confirm() : "\<C-g>u\<CR>"
 
 " This makes the time before it updates your hover faster, other
-set updatetime=300
+set updatetime=100
 
 " This makes it so that you can click a variable and a float window pops up
 autocmd CursorHold * silent call CocActionAsync('doHover')
@@ -126,9 +128,9 @@ let g:closetag_shortcut = '>'
 " Enables closing tags for React fragments -> <></> for all supported file types
 let g:closetag_enable_react_fragment = 1
 
-let $FZF_DEFAULT_OPTS="--preview-window 'right:57%' --preview 'bat --style=numbers --line-range :300 {}'
-\ --bind ctrl-y:preview-up,ctrl-e:preview-down,
-\ctrl-b:preview-page-up,ctrl-f:preview-page-down,
-\ctrl-u:preview-half-page-up,ctrl-d:preview-half-page-down,
-\shift-up:preview-top,shift-down:preview-bottom,
-\alt-up:half-page-up,alt-down:half-page-down"
+"let $FZF_DEFAULT_OPTS="--preview-window 'right:57%' --preview 'bat --style=numbers --line-range :300 {}'
+"\ --bind ctrl-y:preview-up,ctrl-e:preview-down,
+"\ctrl-b:preview-page-up,ctrl-f:preview-page-down,
+"\ctrl-u:preview-half-page-up,ctrl-d:preview-half-page-down,
+"\shift-up:preview-top,shift-down:preview-bottom,
+"\alt-up:half-page-up,alt-down:half-page-down"

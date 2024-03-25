@@ -46,6 +46,5 @@ Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 """"""""""""""""""""""""""""
 
 Plug 'ap/vim-css-color'
-"Plug 'davidhalter/jedi-vim'
 
 call plug#end()
