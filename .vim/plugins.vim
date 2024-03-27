@@ -7,7 +7,7 @@ Plug 'morhetz/gruvbox'
 Plug 'Yggdroot/indentLine'
 Plug 'jiangmiao/auto-pairs'
 Plug 'tpope/vim-surround'
-Plug 'preservim/nerdtree'
+"Plug 'preservim/nerdtree'
 Plug 'preservim/nerdcommenter'
 Plug 'styled-components/vim-styled-components', { 'branch': 'main' }
 Plug 'alvan/vim-closetag'
@@ -37,6 +37,7 @@ Plug 'bling/vim-airline'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'junegunn/goyo.vim'
 Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app && npx --yes yarn install' }
+Plug 'mcchrish/nnn.vim'
 
 " Nvim for python development
 Plug 'Vimjas/vim-python-pep8-indent'

@@ -1,18 +1,32 @@
 autocmd BufWritePre *.ts,*.tsx CocCommand tsserver.executeFormat
 
+" Init config for (NNN/File manager)
+" Disable default mappings
+let g:nnn#set_default_mappings = 0
+
+" Set custom mappings
+nnoremap <silent> <leader>nn :NnnPicker<CR>
+
+" Start n³ in the current file's directory
+nnoremap <leader>n :NnnPicker %:p:h<CR>
+
 " Init config for (FZF)
 let g:fzf_vim = {}
-let g:fzf_layout = { 'window': { 'options':'--reverse','width': 0.7, 'height': 0.7, 'relative':v:false} }
+let g:fzf_layout = { 'window': { 'options':'--reverse','width': 0.8, 'height': 0.8, 'relative':v:false} }
 
-" Possible values :'local' ( default ), 'remote' , 'base' (MergeTool)
+let $FZF_DEFAULT_OPTS="--color=dark --layout=reverse --margin=1,1 --color=fg:15,bg:-1,hl:1,fg+:#ffffff,bg+:0,hl+:2 --color=info:0,pointer:12,marker:4,spinner:11,header:-1"
+
+
+" Init config for (MergeTool)
+" Possible values :'local' ( default ), 'remote' , 'base'
 let g:mergetool_prefer_revision = 'local'
 
-" ( m ) : for working of tree version merged file (MergeTool)
-" ( r ) : for 'remote' revision (MergeTool)
-" ( l ) : for 'local' revision (MergeTool)
+" ( m ) : for working of tree version merged file
+" ( r ) : for 'remote' revision
+" ( l ) : for 'local' revision
 let g:mergetool_layout = 'mr'
 
- "CoC extensions
+" Init config for (COC)
 let g:coc_global_extensions = ['coc-tsserver']
 
 " use <tab> to trigger completion and navigate to the next complete item
@@ -29,7 +43,6 @@ inoremap <silent><expr> <Tab>
 inoremap <expr> <cr> coc#pum#visible() ? coc#pum#confirm() : "\<CR>"
 
 inoremap <silent><expr> <cr> coc#pum#visible() ? coc#_select_confirm() : "\<C-g>u\<CR>"
-
 " This makes the time before it updates your hover faster, other
 set updatetime=100
 
@@ -37,8 +50,8 @@ set updatetime=100
 autocmd CursorHold * silent call CocActionAsync('doHover')
 
 autocmd StdinReadPre * let s:std_in=1
-autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTreeToggle | endif
-
+"autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTreeToggle | endif
+autocmd VimEnter * FZF
 
 " Auto popup complete disabled
 let g:asyncomplete_auto_popup = 1
@@ -55,10 +68,10 @@ inoremap <silent><expr> <TAB>
   \ asyncomplete#force_refresh()
 inoremap <expr><S-TAB> pumvisible() ? "\<C-p>" : "\<C-h>"
 
-"Lsp diagnostics disabled
+"Lsp diagnostics disabled (so many errors on screen when using typescript)
 let g:lsp_diagnostics_enabled = 0
 
-" autocmd 
+" Function for hightlight when hover
     function! HighlightWordUnderCursor()
         if getline(".")[col(".")-1] !~# '[[:punct:][:blank:]]'
             exec 'match' 'Search' '/\V\<'.expand('<cword>').'\>/'          
@@ -68,7 +81,7 @@ let g:lsp_diagnostics_enabled = 0
     endfunction
     autocmd! CursorHold,CursorHoldI * call HighlightWordUnderCursor()
 
-" Theme color
+" Init config for (Gruvbox / theme)
   if exists('+termguicolors')
   let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
     let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
@@ -85,32 +98,26 @@ autocmd BufLeave *.{js,jsx,ts,tsx} :syntax sync clear
 
 " filenames like *.xml, *.html, *.xhtml, ...
 " These are the file extensions where this plugin is enabled.
-"
 let g:closetag_filenames = '*.html,*.xhtml,*.phtml,*.jsx,*.tsx'
 
 " filenames like *.xml, *.xhtml, ...
 " This will make the list of non-closing tags self-closing in the specified files.
-"
 let g:closetag_xhtml_filenames = '*.xhtml,*.jsx,*.tsx'
 
 " filetypes like xml, html, xhtml, ...
 " These are the file types where this plugin is enabled.
-"
 let g:closetag_filetypes = 'html,xhtml,phtml'
 
 " filetypes like xml, xhtml, ...
 " This will make the list of non-closing tags self-closing in the specified files.
-"
 let g:closetag_xhtml_filetypes = 'xhtml,jsx,tsx'
 
 " integer value [0|1]
 " This will make the list of non-closing tags case-sensitive (e.g. `<Link>` will be closed while `<link>` won't.)
-"
 let g:closetag_emptyTags_caseSensitive = 1
 
 " dict
 " Disables auto-close if not in a "valid" region (based on filetype)
-"
 let g:closetag_regions = {
     \ 'typescript.tsx': 'jsxRegion,tsxRegion',
     \ 'javascript.jsx': 'jsxRegion',

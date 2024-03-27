@@ -4,7 +4,7 @@ let mapleader=" "
 map <leader>G :vertical topleft G<CR>
 map <leader>dg :diffget<CR>
 map <leader>dp :diffput<CR>
-map <leader>ll :vertical topleft G log<CR>
+map <leader>L :vertical topleft G log<CR>
 
 " Gvdiffsplit config
 map <leader>mr :Gvdiffsplit<CR>
@@ -45,7 +45,11 @@ nnoremap <leader>> 10<C-w>>
 nnoremap <leader>< 10<C-w><
 
 " NerdTree shortcut
-nnoremap <leader>e :NERDTreeToggle<CR>
+"nnoremap <leader>e :NERDTreeToggle<CR>
+nnoremap <leader>e :Files %:p:h<CR>
+nnoremap <leader>E :GFiles<CR>
+
+" FZF --multi --layout=reverse-list --info=inline --pointer=→  --marker=♡
 
 " Shortcuts for split navigation
 map <leader>h <C-w>h
