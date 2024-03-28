@@ -42,3 +42,4 @@ so ~/.config/nvim/.vim/maps.vim
 so ~/.config/nvim/.vim/plugins.vim
 so ~/.config/nvim/.vim/config.vim
 so ~/.config/nvim/.vim/coc.vim
+so ~/.config/nvim/MyInit.lua

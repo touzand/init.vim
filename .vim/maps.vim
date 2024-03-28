@@ -46,8 +46,9 @@ nnoremap <leader>< 10<C-w><
 
 " NerdTree shortcut
 "nnoremap <leader>e :NERDTreeToggle<CR>
-nnoremap <leader>e :Files %:p:h<CR>
-nnoremap <leader>E :GFiles<CR>
+"nnoremap <leader>e :Files %:p:h<CR>
+"nnoremap <leader>E :GFiles<CR>
+nnoremap <leader>e :NvimTreeToggle<CR>
 
 " FZF --multi --layout=reverse-list --info=inline --pointer=→  --marker=♡
 
@@ -62,6 +63,7 @@ nnoremap <leader>bf :Buffers<CR>
 
 " Source Vim configuration file and install plugins
 nnoremap <silent><leader>1 :source ~/.config/nvim/init.vim \| :PlugInstall<CR>
+nnoremap <silent><leader>so :so %<CR>
 
 " Asyncomplete.vim config
 inoremap <expr> <Tab>   pumvisible() ? "\<C-n>" : "\<Tab>"

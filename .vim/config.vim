@@ -14,8 +14,7 @@ nnoremap <leader>n :NnnPicker %:p:h<CR>
 let g:fzf_vim = {}
 let g:fzf_layout = { 'window': { 'options':'--reverse','width': 0.8, 'height': 0.8, 'relative':v:false} }
 
-let $FZF_DEFAULT_OPTS="--color=dark --layout=reverse --margin=1,1 --color=fg:15,bg:-1,hl:1,fg+:#ffffff,bg+:0,hl+:2 --color=info:0,pointer:12,marker:4,spinner:11,header:-1"
-
+let $FZF_DEFAULT_OPTS="--color=dark --layout=reverse --margin=1,1 --color=fg:15,bg:-1,hl:1,fg+:#ffffff,bg+:0,hl+:2 --color=info:0,pointer:12,marker:14,spinner:11,header:-1"
 
 " Init config for (MergeTool)
 " Possible values :'local' ( default ), 'remote' , 'base'
@@ -51,7 +50,7 @@ autocmd CursorHold * silent call CocActionAsync('doHover')
 
 autocmd StdinReadPre * let s:std_in=1
 "autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTreeToggle | endif
-autocmd VimEnter * FZF
+autocmd VimEnter * NvimTreeOpen
 
 " Auto popup complete disabled
 let g:asyncomplete_auto_popup = 1
