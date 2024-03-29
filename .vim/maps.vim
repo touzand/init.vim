@@ -63,7 +63,7 @@ nnoremap <leader>bf :Buffers<CR>
 
 " Source Vim configuration file and install plugins
 nnoremap <silent><leader>1 :source ~/.config/nvim/init.vim \| :PlugInstall<CR>
-nnoremap <silent><leader>so :so %<CR>
+nnoremap <leader>so :source %<CR>
 
 " Asyncomplete.vim config
 inoremap <expr> <Tab>   pumvisible() ? "\<C-n>" : "\<Tab>"
