@@ -1,5 +1,11 @@
 call plug#begin()
 
+Plug 'HerringtonDarkholme/yats.vim'
+
+
+
+
+
 " Theme color
 Plug 'morhetz/gruvbox'
 
@@ -7,12 +13,11 @@ Plug 'morhetz/gruvbox'
 Plug 'Yggdroot/indentLine'
 Plug 'jiangmiao/auto-pairs'
 Plug 'tpope/vim-surround'
-"Plug 'preservim/nerdtree'
 Plug 'preservim/nerdcommenter'
 Plug 'alvan/vim-closetag'
 Plug 'kqito/vim-easy-replace'
 Plug 'prabirshrestha/asyncomplete.vim'
-Plug 'HerringtonDarkholme/yats.vim'
+Plug 'prabirshrestha/asyncomplete-lsp.vim'
 Plug 'styled-components/vim-styled-components'
 
 " Git flow

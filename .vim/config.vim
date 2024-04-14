@@ -1,3 +1,10 @@
+" Configuracion para supuestamente evitar quiebre en styled-componentes
+autocmd BufEnter *.{js,jsx,ts,tsx} :syntax sync fromstart
+autocmd BufLeave *.{js,jsx,ts,tsx} :syntax sync clear
+
+
+
+
 autocmd BufWritePre *.ts,*.tsx CocCommand tsserver.executeFormat
 
 " Init config for (NNN/File manager)
