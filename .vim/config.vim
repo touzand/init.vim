@@ -3,13 +3,16 @@ autocmd BufEnter *.{js,jsx,ts,tsx} :syntax sync fromstart
 autocmd BufLeave *.{js,jsx,ts,tsx} :syntax sync clear
 
 
-
+" the separator used on the left side
+let g:airline_left_sep=''
+" the separator used on the right side 
+let g:airline_right_sep=''
 
 autocmd BufWritePre *.ts,*.tsx CocCommand tsserver.executeFormat
 
-" Init config for (NNN/File manager)
-" Disable default mappings
-let g:nnn#set_default_mappings = 0
+"" Init config for (NNN/File manager)
+"" Disable default mappings
+"let g:nnn#set_default_mappings = 0
 
 " Set custom mappings
 nnoremap <silent> <leader>nn :NnnPicker<CR>
@@ -60,7 +63,7 @@ autocmd StdinReadPre * let s:std_in=1
 autocmd VimEnter * NvimTreeOpen
 
 " Auto popup complete disabled
-let g:asyncomplete_auto_popup = 1
+let g:asyncomplete_auto_popup = 0
 autocmd! CompleteDone * if pumvisible() == 0 | pclose | endif
 
 function! s:check_back_space() abort

@@ -3,9 +3,6 @@ call plug#begin()
 Plug 'HerringtonDarkholme/yats.vim'
 
 
-
-
-
 " Theme color
 Plug 'morhetz/gruvbox'
 
@@ -22,7 +19,7 @@ Plug 'styled-components/vim-styled-components'
 
 " Git flow
 Plug 'tpope/vim-fugitive'
-Plug 'lewis6991/gitsigns.nvim'
+"Plug 'lewis6991/gitsigns.nvim'
 Plug 'samoshkin/vim-mergetool'
 
 " Fzf
@@ -40,17 +37,17 @@ Plug 'mattn/vim-lsp-settings'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'bling/vim-airline'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
-Plug 'junegunn/goyo.vim'
 Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app && npx --yes yarn install' }
+Plug 'junegunn/goyo.vim'
 
 Plug 'nvim-tree/nvim-tree.lua'
 Plug 'nvim-tree/nvim-web-devicons'
 Plug 'ryanoasis/vim-devicons'
 
 " Nvim for python development
-Plug 'Vimjas/vim-python-pep8-indent'
-Plug 'ncm2/ncm2'
-Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+"Plug 'Vimjas/vim-python-pep8-indent'
+"Plug 'ncm2/ncm2'
+"Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 
 """"""""""""""""""""""""""""
 
