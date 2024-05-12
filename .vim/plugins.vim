@@ -1,9 +1,13 @@
 call plug#begin()
 
 Plug 'HerringtonDarkholme/yats.vim'
+Plug 'Pocco81/true-zen.nvim'
+Plug 'preservim/nerdtree'
+"Plug 'skywind3000/vim-keysound'
+Plug 'ThePrimeagen/vim-be-good'
+"Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 
-
-" Theme color
+"Theme color
 Plug 'morhetz/gruvbox'
 
 " IDE 
@@ -15,11 +19,11 @@ Plug 'alvan/vim-closetag'
 Plug 'kqito/vim-easy-replace'
 Plug 'prabirshrestha/asyncomplete.vim'
 Plug 'prabirshrestha/asyncomplete-lsp.vim'
+Plug 'mattn/vim-lsp-settings'
 Plug 'styled-components/vim-styled-components'
 
 " Git flow
 Plug 'tpope/vim-fugitive'
-"Plug 'lewis6991/gitsigns.nvim'
 Plug 'samoshkin/vim-mergetool'
 
 " Fzf
@@ -31,25 +35,17 @@ Plug 'prabirshrestha/vim-lsp'
 Plug 'neovim/nvim-lspconfig'
 Plug 'jose-elias-alvarez/null-ls.nvim'
 Plug 'prettier/vim-prettier', { 'do': 'yarn install --frozen-lockfile --production' }
-Plug 'mattn/vim-lsp-settings'
 
-" Really necessary ?
-Plug 'vim-airline/vim-airline-themes'
-Plug 'bling/vim-airline'
+Plug 'nvim-lualine/lualine.nvim'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app && npx --yes yarn install' }
 Plug 'junegunn/goyo.vim'
+Plug 'junegunn/limelight.vim'
 
 Plug 'nvim-tree/nvim-tree.lua'
 Plug 'nvim-tree/nvim-web-devicons'
 Plug 'ryanoasis/vim-devicons'
 
-" Nvim for python development
-"Plug 'Vimjas/vim-python-pep8-indent'
-"Plug 'ncm2/ncm2'
-"Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
-
-""""""""""""""""""""""""""""
 
 Plug 'ap/vim-css-color'
 

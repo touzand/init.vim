@@ -1,5 +1,6 @@
 syntax on
 
+"scriptencoding utf-8
 packloadall
 set nu
 set relativenumber
@@ -20,7 +21,7 @@ set ignorecase
 set smartcase        
 set scrolloff=8      
 set signcolumn=yes   
-set cmdheight=2      
+set cmdheight=1     
 set updatetime=100
 set encoding=utf-8
 set nobackup        
@@ -33,6 +34,11 @@ set mouse=a
 set path+=**
 set langmenu=en_US.UTF-8
 set nocompatible
+"set completeopt+=menuone
+"set completeopt-=menu completeopt+=menuone
+"set enc=utf-8
+"set fenc=utf-8
+"set fencs=iso-2022-jp,euc-jp,cp932
 
 filetype on          
 filetype plugin on  
