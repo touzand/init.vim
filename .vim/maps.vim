@@ -71,6 +71,6 @@ map <leader>pp :!python3 %<CR>
 map <leader>nn :!node %<CR>
 
 " Run prettier
-map <leader>P :Prettier<CR>
-"map <leader>P : ! prettier % --write<CR><CR>
+"map <leader>P :Prettier<CR>
+map <leader>P : ! prettier % --write<CR><CR>
 

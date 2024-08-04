@@ -3,6 +3,7 @@ syntax on
 "scriptencoding utf-8
 packloadall
 set nu
+set notermguicolors
 set relativenumber
 set relativenumber          
 set tabstop=2        
